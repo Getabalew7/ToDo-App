@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 //component
 import TodoContainer from './functionBased/components/TodoContainer'
 //stylesheet
@@ -8,8 +8,8 @@ import "./functionBased/App.css"
 
 ReactDOM.render(
    <React.StrictMode>
-      <BrowserRouter>
+      <Router basename={process.env.PUBLIC_URL}>
          <TodoContainer />
-      </BrowserRouter>
+      </Router>
    </React.StrictMode>,
    document.getElementById('root'))
